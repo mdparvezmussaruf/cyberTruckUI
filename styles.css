@@ -6,13 +6,17 @@ body {
 }
 
 .cyber-nav {
+    background: linear-gradient(135deg, #A9A9A9, #D3D3D3);
+    padding: 15px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #A9A9A9, #D3D3D3); /* Metallic gradient */
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%); /* Trapezoid shape */
-    padding: 20px 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Depth */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -20,6 +24,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: rgb(99, 99, 99); /* Ensure contrast */
+    padding: 5px 0;
 }
 
 .nav-links {
@@ -28,14 +34,17 @@ body {
     gap: 30px;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: #D3D3D3;
+    color: #302f2f;
     font-size: 18px;
     position: relative;
     transition: color 0.3s ease;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .nav-links li a:hover {
@@ -123,7 +132,11 @@ body {
 }
 @media (max-width: 768px) {
     .cyber-nav {
-        clip-path: none;
-        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
     }
 }
